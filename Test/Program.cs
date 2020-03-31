@@ -13,8 +13,11 @@ namespace Test
             Point p2 = new Point(4, 5, '$');
             p2.Draw();
             
-            HorizontalLine line = new HorizontalLine(5, 10, 8, '+');
+            HorizontalLine line = new HorizontalLine(5, 10, 8, '-');
             line.Draw();
+            
+            VerticalLine lineV = new VerticalLine(4, 10, 1, '|');
+            lineV.Draw();
             Console.ReadLine();
         }
     }
