@@ -2,10 +2,8 @@ using System.Collections.Generic;
 
 namespace Test
 {
-    public class VerticalLine
+    public class VerticalLine : Figure
     {
-        private List<Point> pList;
-
         public VerticalLine(int yTop, int yBottom, int x,  char sym)
         {
             pList = new List<Point>();
@@ -15,15 +13,5 @@ namespace Test
                 pList.Add(p);
             }
         }
-
-        public void Draw()
-        {
-            foreach (Point p in pList)
-            {
-                p.Draw();
-            }
-        }
-
-
     }
 }
