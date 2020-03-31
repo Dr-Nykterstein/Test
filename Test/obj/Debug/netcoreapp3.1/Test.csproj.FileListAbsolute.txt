@@ -1,0 +1,11 @@
+/home/alexandr/RiderProjects/Test/Test/bin/Debug/netcoreapp3.1/Test
+/home/alexandr/RiderProjects/Test/Test/bin/Debug/netcoreapp3.1/Test.deps.json
+/home/alexandr/RiderProjects/Test/Test/bin/Debug/netcoreapp3.1/Test.runtimeconfig.json
+/home/alexandr/RiderProjects/Test/Test/bin/Debug/netcoreapp3.1/Test.runtimeconfig.dev.json
+/home/alexandr/RiderProjects/Test/Test/bin/Debug/netcoreapp3.1/Test.dll
+/home/alexandr/RiderProjects/Test/Test/bin/Debug/netcoreapp3.1/Test.pdb
+/home/alexandr/RiderProjects/Test/Test/obj/Debug/netcoreapp3.1/Test.csprojAssemblyReference.cache
+/home/alexandr/RiderProjects/Test/Test/obj/Debug/netcoreapp3.1/Test.AssemblyInfoInputs.cache
+/home/alexandr/RiderProjects/Test/Test/obj/Debug/netcoreapp3.1/Test.AssemblyInfo.cs
+/home/alexandr/RiderProjects/Test/Test/obj/Debug/netcoreapp3.1/Test.dll
+/home/alexandr/RiderProjects/Test/Test/obj/Debug/netcoreapp3.1/Test.pdb

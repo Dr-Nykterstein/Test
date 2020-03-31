@@ -6,27 +6,18 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            int x1 = 1;
-            int y1 = 3;
-            char symb1 = '*';
-            
-            Console.SetCursorPosition(x1, y1);
-            Console.Write(symb1);
-            
-            
-            int x2 = 4;
-            int y2 = 5;
-            char symb2 = '#';
-            
-            Draw(x2, y2, symb2);
-            
-            Console.ReadLine();
-        }
+            Point p1 = new Point();
+            p1.x = 1;
+            p1.y = 3;
+            p1.sym = '*';
+            p1.Draw();
 
-        static void Draw(int x, int y, char sym)
-        {
-            Console.SetCursorPosition(x,y);
-            Console.Write(sym);
+            Point p2 = new Point();
+            p2.x = 4;
+            p2.y = 5;
+            p2.sym = '#';
+            p2.Draw();
+            Console.ReadLine();
         }
     }
 }
