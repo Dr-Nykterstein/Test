@@ -8,10 +8,11 @@ namespace Test
         static void Main(string[] args)
         {
             Point p1 = new Point(1, 3, '*');
-            p1.Draw();
 
-            Point p2 = new Point(4, 5, '$');
-            p2.Draw();
+            Snake snake = new Snake(p1, 4, Direction.RIGHT);
+            snake.Draw();
+            // Point p2 = new Point(4, 5, '$');
+            // p2.Draw();
             
             HorizontalLine line = new HorizontalLine(5, 10, 8, '-');
             line.Draw();

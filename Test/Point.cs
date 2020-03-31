@@ -8,9 +8,11 @@ namespace Test
         public int y;
         public char sym;
 
-        public Point()
+        public Point(Point p)
         {
-            
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
         }
 
         public Point(int _x, int _y, char _sym)
@@ -19,6 +21,27 @@ namespace Test
             y = _y;
             sym = _sym;
         }
+
+        public void Move(int offset, Direction direction)
+        {
+            if (direction == Direction.RIGHT)
+            {
+                x = x + offset;
+            }
+            else if (direction == Direction.LEFT)
+            {
+                x = x - offset;
+            }
+            else if (direction == Direction.UP)
+            {
+                y = y + offset;
+            }
+            else
+            {
+                y = y - offset;
+            }
+        }
+
         public void Draw()
         {
             Console.SetCursorPosition(x,y);
