@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -5,7 +6,8 @@ namespace Test
 {
     public class Snake : Figure
     {
-        Direction direction;
+        public Direction direction;
+
         public Snake(Point tail, int lenght, Direction _direction)
         {
             direction = _direction;
@@ -36,5 +38,29 @@ namespace Test
             nextPoint.Move(1, direction);
             return nextPoint;
         }
-    }
+
+        public void HandleKey(ConsoleKey key)
+        {
+        if (key == ConsoleKey.LeftArrow && direction != Direction.Right )
+            direction = Direction.Left;
+        else if (key == ConsoleKey.RightArrow && direction != Direction.Left) 
+            direction = Direction.Right;
+        else if (key == ConsoleKey.UpArrow && direction != Direction.Down)
+            direction = Direction.Up;
+        else if (key == ConsoleKey.DownArrow && direction != Direction.Up)
+            direction = Direction.Down;
+        }
+
+        internal bool Eat(Point food)
+        {
+            Point head = pList.Last();
+            if (head.IsHit(food))
+            {
+                food.sym = head.sym;
+                pList.Add(food);
+                return true;
+            }
+            return false;
+        }
+}
 }

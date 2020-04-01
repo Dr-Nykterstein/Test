@@ -8,6 +8,7 @@
       <e p="Test" t="IncludeRecursive">
         <e p="Direction.cs" t="Include" />
         <e p="Figure.cs" t="Include" />
+        <e p="FoodCreator.cs" t="Include" />
         <e p="HorizontalLine.cs" t="Include" />
         <e p="Point.cs" t="Include" />
         <e p="Program.cs" t="Include" />

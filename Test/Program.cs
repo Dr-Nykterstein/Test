@@ -8,32 +8,50 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 3, '*');
 
-            Snake snake = new Snake(p1, 4, Direction.RIGHT);
+            HorizontalLine upLine = new HorizontalLine(0, 78, 0, '-');
+            HorizontalLine downLine = new HorizontalLine(0, 78, 24, '-');
+            VerticalLine leftLine = new VerticalLine(0, 24, 0, '|');
+            VerticalLine rightLine = new VerticalLine(0, 24, 78, '|');
+            upLine.Draw();
+            downLine.Draw();
+            leftLine.Draw();
+            rightLine.Draw(); 
+            
+            Point p1 = new Point(15, 15, '*');
+            Snake snake = new Snake(p1, 4, Direction.Right);
             snake.Draw();
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300); 
-            snake.Move();
-            Thread.Sleep(300); 
-            snake.Move();
-            Thread.Sleep(300); 
-            snake.Move();
-            Thread.Sleep(300);
-            // Point p2 = new Point(4, 5, '$');
-            // p2.Draw();
+            FoodCreator foodCreator = new FoodCreator(80, 25, '$');
+            Point food = foodCreator.CreateFood();
+            food.Draw();
             
-            HorizontalLine line = new HorizontalLine(5, 10, 8, '-');
-            line.Draw();
+            while (true)
+            {
+                if (snake.Eat(food))
+                {
+                    food.Draw();
+                    food = foodCreator.CreateFood();
+                    food.Draw();
+                }
+                else
+                {
+                    snake.Move();
+                }
+                
+                Thread.Sleep(1500);
+                
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey(key.Key);  
+                }
+                
+                snake.Move();
+            }
             
-            VerticalLine lineV = new VerticalLine(4, 10, 1, '|');
-            lineV.Draw();
+            
+            
+            
             Console.ReadLine();
         }
     }

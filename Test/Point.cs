@@ -24,24 +24,28 @@ namespace Test
 
         public void Move(int offset, Direction direction)
         {
-            if (direction == Direction.RIGHT)
+            if (direction == Direction.Right)
             {
                 x = x + offset;
             }
-            else if (direction == Direction.LEFT)
+            else if (direction == Direction.Left)
             {
                 x = x - offset;
             }
-            else if (direction == Direction.UP)
-            {
-                y = y + offset;
-            }
-            else
+            else if (direction == Direction.Up)
             {
                 y = y - offset;
             }
+            else if (direction == Direction.Down)
+            {
+                y = y + offset;
+            }
         }
 
+        public bool IsHit(Point p)
+        {
+            return p.x == this.x && p.y == this.y;
+        }
         public void Clear()
         {
             sym = ' ';
